@@ -1,0 +1,233 @@
+.rn-google_reviews {
+  background-color: var(--White);
+  padding: 4rem 0;
+
+  @include lg-up {
+    padding: 8rem 0;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 2rem;
+
+    @include lg-up {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3.2rem;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--Black);
+    margin: 0;
+
+    @include lg-up {
+      font-size: 4rem;
+    }
+
+    em {
+      font-style: italic;
+      color: var(--Primary);
+    }
+
+    br.mobile {
+      display: block;
+      @include md-up {
+        display: none;
+      }
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 6rem;
+      width: auto;
+      object-fit: contain;
+      @include md-up {
+        height: 6.4rem;
+      }
+      @include lg-up {
+        height: 8rem;
+      }
+    }
+  }
+
+  &__carousel {
+    position: relative;
+  }
+
+  .embla__viewport {
+    padding: 10px 0;
+  }
+
+  &__card {
+    background-color: var(--White);
+    border: 0.1rem solid var(--Primary);
+    border-radius: 1.6rem;
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: flex-start;
+    box-shadow:
+      0px 7px 7px 0px rgba(0, 0, 0, 0.09),
+      0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 100%;
+
+    @include lg-up {
+      border-radius: 2rem;
+    }
+
+    &-user {
+      display: flex;
+      gap: 1.6rem;
+      align-items: center;
+      width: 100%;
+
+      img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      &-info {
+        flex: 1;
+        p {
+          font-size: 1.6rem;
+          font-weight: 600;
+          color: #1a1a1a;
+          margin: 0;
+          line-height: 1.25;
+        }
+      }
+    }
+
+    &-stars {
+      height: 2.4rem;
+      width: auto;
+      object-fit: contain;
+    }
+
+    &-text {
+      font-size: 1.6rem;
+      line-height: 1.25;
+      color: #1a1a1a;
+      margin: 0;
+    }
+  }
+
+  &__nav {
+    margin-top: 2rem;
+
+    @include lg-up {
+      margin-top: 3.2rem;
+    }
+
+    .embla__buttons {
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
+      gap: 2rem;
+
+      @include lg-up {
+        gap: 4rem;
+      }
+    }
+
+    .embla__button {
+      width: 5rem;
+      height: 4.8rem;
+      padding: 0;
+      color: var(--Primary);
+      background: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &.is-disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      svg {
+        width: 2.4rem;
+        height: auto;
+
+        @include lg-up {
+          width: 3.2rem;
+        }
+
+        &.desktop {
+          display: none;
+          @include lg-up {
+            display: block;
+            width: 5.2rem;
+          }
+        }
+
+        &.mobile {
+          display: block;
+          @include lg-up {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .btns-wrp {
+    margin-top: 3.2rem;
+    display: flex;
+    justify-content: flex-start;
+
+    @include lg-up {
+      margin-top: 4.8rem;
+    }
+
+    .btn-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+
+      .btn {
+        background-color: var(--Primary);
+        color: var(--Secondary-3);
+        border: 0.1rem solid var(--Primary);
+      }
+
+      span {
+        color: var(--Black);
+        font-size: 1.2rem;
+
+        @include lg-up {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+.em__slider-google-reviews {
+  --slide-spacing: 3.2rem;
+  --slide-size: 31.2rem;
+
+  @include lg-up {
+    --slide-size-lg: 38.2rem;
+    --slide-spacing-lg: 3.2rem;
+  }
+}
